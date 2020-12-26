@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  backend_dev:
+    container_name: tlm_backend_dev
+    build: ./backend/
+    environment:
+      - VIRTUAL_HOST=si.tlm.local
+    volumes : 
+      - ./backend/:/usr/src/app:rw
+    ports:
+      - "3030:3000"
+    links:
+      - mongo
+  
+  mongo:
+    container_name: tlm_mongo_dev
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+
+  frontend_dev:
+    image: node:latest
+    container_name: tlm_frontend_dev
+    volumes:
+      - ./frontend/:/home/node/app
+    working_dir: /home/node/app
+    command: npm run start-deploy
+    ports:
+        - "80:5000"

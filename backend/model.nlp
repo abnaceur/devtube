@@ -1,0 +1,168 @@
+{
+  "settings": {
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp"
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "fr",
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "fr": {
+        "settings": {
+          "locale": "fr",
+          "tag": "domain-manager-fr",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "trainByDomain": false,
+          "useStemDict": true
+        },
+        "stemDict": {},
+        "intentDict": {},
+        "sentences": [],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "fr",
+              "tag": "nlu-fr",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {},
+            "intents": {},
+            "intentFeatures": {},
+            "neuralNetwork": {
+              "features": [
+                "nonefeature"
+              ],
+              "intents": [
+                "None"
+              ],
+              "perceptrons": [
+                [
+                  8.289545059204102,
+                  4.150278708563915
+                ]
+              ],
+              "perceptronSettings": {
+                "locale": "fr",
+                "tag": "nlu-fr",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              }
+            }
+          }
+        }
+      },
+      "en": {
+        "settings": {
+          "locale": "en",
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "trainByDomain": false,
+          "useStemDict": true
+        },
+        "stemDict": {},
+        "intentDict": {},
+        "sentences": [],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {},
+            "intents": {},
+            "intentFeatures": {},
+            "neuralNetwork": {
+              "features": [
+                "nonefeature"
+              ],
+              "intents": [
+                "None"
+              ],
+              "perceptrons": [
+                [
+                  8.289545059204102,
+                  4.150278708563915
+                ]
+              ],
+              "perceptronSettings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": []
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
